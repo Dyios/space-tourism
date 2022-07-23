@@ -59,8 +59,8 @@ export default function Destination() {
                         spacing={{ xs: 8, md: 20 }}
                         alignItems="center"
                         sx={{
-                            '& > *:first-of-type(img)': {
-                                ml: 8,
+                            '& > *:first-child': {
+                                ml: { md: 7 },
                             }
                         }}
                     >
