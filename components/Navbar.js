@@ -9,7 +9,7 @@ import Drawer from '@mui/material/Drawer'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-const links = ['Home', 'Destination', 'Crew', 'Technology']
+const links = ['home', 'destination', 'crew', 'technology']
 
 export default function Navbar({ currentPage }) {
     const theme = useTheme()
@@ -25,7 +25,7 @@ export default function Navbar({ currentPage }) {
             justifyContent='space-between'
             alignItems='center'
         >
-            <Image src={Logo}
+            <Image src={Logo} alt='logo'
                 width={useMediaQuery(theme.breakpoints.down("sm")) ? 40 : 48}
                 height={useMediaQuery(theme.breakpoints.down("sm")) ? 40 : 48}
             />
@@ -62,7 +62,7 @@ export default function Navbar({ currentPage }) {
                 {
                     links.map((link, index) => {
                         return (
-                            <Link key={index} href="#">
+                            <Link key={index} href={`/${link !== 'home' ? link : ''}`}>
                                 <Stack direction='row' spacing={1.5} py={{ sm: 4.8, md: 4.9 }}
                                     sx={{
                                         position: 'relative',
@@ -137,7 +137,7 @@ export default function Navbar({ currentPage }) {
                                 {
                                     links.map((link, index) => {
                                         return (
-                                            <Link key={index} href="#">
+                                            <Link key={index} href={`/${link !== 'home' ? link : ''}`}>
                                                 <Stack direction="row" spacing={1.5}
                                                     alignItems='center'
                                                     sx={{
@@ -145,6 +145,9 @@ export default function Navbar({ currentPage }) {
                                                         width: '100%',
                                                         p: 0.5,
                                                         pr: 11,
+                                                        '&:hover': {
+                                                            cursor: 'pointer',
+                                                        },
                                                         '&:hover > hr:not(.active)': {
                                                             backgroundColor: 'primary.main',
                                                             opacity: '0.5',
