@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery';
+import PageTitle from '../components/PageTitle'
 
 const destinations = ["moon", "mars", "europa", "titan"]
 
@@ -42,24 +43,13 @@ export default function Destination() {
                     mb={{ sm: 3, md: 5 }}
                     alignItems={{ xs: "center", sm: "normal" }}
                 >
-                    <Stack direction="row" spacing={{ xs: 2, sm: 3 }} ml={{ sm: 5, md: 20 }}>
-                        <Typography component="h1" variant="h5"
-                            color="primary" sx={{ opacity: 0.25 }}
-                        >
-                            01
-                        </Typography>
-                        <Typography component="h1" variant="h5" textTransform="uppercase"
-                            color="primary"
-                        >
-                            Pick your destination
-                        </Typography>
-                    </Stack>
+                    <PageTitle number='01' title='Pick your destination' />
                     <Stack direction={{ xs: "column", md: "row" }} mt={{ xs: 4, sm: 8, md: 10 }}
                         justifyContent="center"
                         spacing={{ xs: 8, md: 20 }}
                         alignItems="center"
                         sx={{
-                            '& > *:first-child': {
+                            '& > img:first-of-type': {
                                 ml: { md: 7 },
                             }
                         }}

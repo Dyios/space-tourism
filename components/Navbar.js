@@ -25,10 +25,12 @@ export default function Navbar({ currentPage }) {
             justifyContent='space-between'
             alignItems='center'
         >
-            <Image src={Logo} alt='logo'
-                width={useMediaQuery(theme.breakpoints.down("sm")) ? 40 : 48}
-                height={useMediaQuery(theme.breakpoints.down("sm")) ? 40 : 48}
-            />
+            <Link href='/'>
+                <Image src={Logo} alt='logo'
+                    width={useMediaQuery(theme.breakpoints.down("sm")) ? 40 : 48}
+                    height={useMediaQuery(theme.breakpoints.down("sm")) ? 40 : 48}
+                />
+            </Link>
             <Divider sx={{
                 display: { xs: 'none', md: 'block' },
                 height: '1px', backgroundColor: 'primary.main', flexGrow: '1',

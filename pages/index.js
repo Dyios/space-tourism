@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
@@ -68,9 +69,11 @@ export default function Home() {
             }
           }}
           >
-            <Typography variant='h4' color='dark' textTransform="uppercase">
-              Explore
-            </Typography>
+            <Link href='/destination'>
+              <Typography variant='h4' color='dark' textTransform="uppercase">
+                Explore
+              </Typography>
+            </Link>
           </Stack>
         </Stack>
       </Stack >
