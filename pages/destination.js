@@ -1,6 +1,5 @@
-import { useState, Fragment } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import destinationsData from '../data/destinationsData.json'
 import Navbar from '../components/Navbar';
 import Stack from '@mui/material/Stack';

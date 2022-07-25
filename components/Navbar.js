@@ -24,6 +24,11 @@ export default function Navbar({ currentPage }) {
             width='100%'
             justifyContent='space-between'
             alignItems='center'
+            sx={{
+                '& > *:first-of-type:hover': {
+                    cursor: 'pointer'
+                }
+            }}
         >
             <Link href='/'>
                 <Image src={Logo} alt='logo'

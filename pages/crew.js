@@ -22,7 +22,7 @@ export default function Crew() {
     return (
         <>
             <Head>
-                <title>Destination</title>
+                <title>Crew</title>
             </Head>
             <Stack component="main"
                 sx={{
@@ -97,7 +97,7 @@ export default function Crew() {
                                 </Typography>
                                 <Typography variant="body1" color="secondary"
                                     mx={{ xs: 'auto', md: 0 }}
-                                    mb={{ sm: "40px", md: "120px" }}
+                                    mb={{ xs: '15px', sm: "40px", md: "120px" }}
                                     maxWidth={{ xs: '327px', sm: '458px', md: '444px' }}
                                     textAlign={{ xs: 'center', md: 'left' }}
                                     lineHeight={{ xs: '25px', sm: '28px' }}
